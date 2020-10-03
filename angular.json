@@ -24,6 +24,7 @@
               "src/assets"
             ],
             "styles": [
+              "src/custom-theme.scss",
               "src/styles.css"
             ],
             "scripts": []
@@ -119,6 +120,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "jake-minecraft"
+    }
+  },
+  "defaultProject": "jake-minecraft",
+  "cli": {
+    "analytics": "333b5a9d-728f-431b-83eb-4956bbe22d34"
+  }
 }
