@@ -1,6 +1,9 @@
 import { Component, ViewChild } from '@angular/core';
 import { MatSidenav } from '@angular/material/sidenav';
 import { SidenavService } from './services/sidenav.service';
+import { OverlayContainer } from '@angular/cdk/overlay';
+import { ThemeService } from './services/theme.service';
+import { stringify } from 'querystring';
 
 @Component({
   selector: 'app-root',
@@ -10,12 +13,21 @@ import { SidenavService } from './services/sidenav.service';
 export class AppComponent {
   @ViewChild('mainsidenav', { static: true }) public sidenav: MatSidenav;
 
-  constructor(private sideNavService: SidenavService) {
+  constructor(private _sideNavService: SidenavService, private _themeService :ThemeService) {
     
   }
 
   ngOnInit(): void {
-    this.sideNavService.setSidenav(this.sidenav);
+    this._sideNavService.setSidenav(this.sidenav);
+  }
+
+  setInitialTheme(): string {
+    if (this._themeService.getTheme()) {
+      return "";
+    }
+    else {
+      return "theme-alternate";
+    }
   }
 
   title = 'jake-minecraft';

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { SidenavService } from 'src/app/services/sidenav.service';
+import { ThemeService } from 'src/app/services/theme.service';
 
 @Component({
   selector: 'app-navbar',
@@ -7,13 +8,36 @@ import { SidenavService } from 'src/app/services/sidenav.service';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent implements OnInit {
+  public isDarkMode: boolean;
 
-  constructor(private sidenav: SidenavService) { }
+  constructor(private sidenav: SidenavService, private _themeService: ThemeService) {
+    window.matchMedia("(prefers-color-scheme: dark)").addEventListener('change', e => {
+      const currentSetting: boolean = e.matches;
+      if (currentSetting) {
+        this.isDarkMode = true;
+      }
+      else {
+        this.isDarkMode = false;
+      }
+    });
+  }
 
   ngOnInit(): void {
+    this.isDarkMode = this._themeService.getTheme();
   }
 
   toggleMainSidenav() {
     this.sidenav.toggle();
+  }
+
+  toggleTheme() {
+    if (this.isDarkMode) {
+      this.isDarkMode = false;
+      this._themeService.setTheme(false);
+    }
+    else {
+      this.isDarkMode = true;
+      this._themeService.setTheme(true);
+    }
   }
 }

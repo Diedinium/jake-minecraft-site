@@ -73,7 +73,7 @@ body {
 }
 
 mat-sidenav {
-    width: 275px;
+    width: 350px;
 }
 
 .breadcrumb-color {
@@ -84,12 +84,20 @@ mat-sidenav {
     background-color: #464646;
 }
 
+.theme-alternate .active-router-link {
+    background-color: #d8d8d8;
+}
+
+.header-spacer {
+    flex: 1 1 auto;
+}
+
 @media only screen and (max-width: 600px) {
     body {
         margin-top: 56px;
     }
     mat-sidenav {
-        width: 200px;
+        width: 250px;
     }
     .container {
         width: 100%;

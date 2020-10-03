@@ -11,6 +11,8 @@ import { SidenavService } from './services/sidenav.service';
 import { MapComponent } from './components/map/map.component';
 import { LocationsComponent } from './components/locations/locations.component';
 import { AboutComponent } from './components/about/about.component';
+import { ThemeService } from './services/theme.service';
+import { CookieService } from 'ngx-cookie-service';
 
 @NgModule({
   declarations: [
@@ -27,7 +29,7 @@ import { AboutComponent } from './components/about/about.component';
     BrowserAnimationsModule,
     MaterialModule
   ],
-  providers: [SidenavService],
+  providers: [SidenavService, CookieService, ThemeService ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

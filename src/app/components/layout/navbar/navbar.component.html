@@ -13,5 +13,10 @@
             <mat-icon>menu</mat-icon>
         </button>
         <span>Jake Minecraft</span>
+        <span class="header-spacer"></span>
+        <button mat-icon-button (click)="toggleTheme()">
+            <mat-icon *ngIf="!this.isDarkMode">brightness_low</mat-icon>
+            <mat-icon *ngIf="this.isDarkMode">brightness_high</mat-icon>
+        </button>
     </mat-toolbar-row>
 </mat-toolbar>
