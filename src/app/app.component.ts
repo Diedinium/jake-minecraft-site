@@ -30,6 +30,11 @@ export class AppComponent {
     }
   }
 
+  handleSideNavClose() {
+    this.sidenav.close();
+    window.scrollTo(0, 0);
+  }
+
   title = 'jake-minecraft';
 }
 

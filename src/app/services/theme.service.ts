@@ -25,9 +25,12 @@ export class ThemeService {
       }
     }
 
-    try {
-      window.matchMedia("(prefers-color-scheme: dark)").addEventListener('change', e => {
+    const darkMediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+
+    if(typeof darkMediaQuery.addEventListener == 'function') {
+      darkMediaQuery.addEventListener('change', (e) => {
         const currentSetting: boolean = e.matches;
+        
         if (currentSetting) {
           this.setTheme(true);
         }
@@ -36,9 +39,11 @@ export class ThemeService {
         }
       });
     }
-    catch(error) {
-      window.matchMedia("(prefers-color-scheme: dark)").addListener(e => {
+    else {
+      alert("addEventListener not available");
+      darkMediaQuery.addListener(e => {
         const currentSetting: boolean = e.matches;
+
         if (currentSetting) {
           this.setTheme(true);
         }

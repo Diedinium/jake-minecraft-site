@@ -11,15 +11,15 @@
 
       <mat-nav-list>
         <h2 matSubheader>Main pages</h2>
-        <a mat-list-item routerLink="/" routerLinkActive="active-router-link" [routerLinkActiveOptions]="{ exact: true }" (click)="this.sidenav.close()"><mat-icon class="pr-1">home</mat-icon>Home</a>
-        <a mat-list-item routerLink="/about" routerLinkActive="active-router-link" (click)="this.sidenav.close()"><mat-icon class="pr-1">info</mat-icon>About</a>
+        <a mat-list-item routerLink="/" routerLinkActive="active-router-link" [routerLinkActiveOptions]="{ exact: true }" (click)="handleSideNavClose()"><mat-icon class="pr-1">home</mat-icon>Home</a>
+        <a mat-list-item routerLink="/about" routerLinkActive="active-router-link" (click)="handleSideNavClose()"><mat-icon class="pr-1">info</mat-icon>About</a>
         <mat-divider></mat-divider>
       </mat-nav-list>
 
       <mat-nav-list>
         <h2 matSubheader>Server content</h2>
-        <a mat-list-item routerLink="/map" routerLinkActive="active-router-link" [routerLinkActiveOptions]="{ exact: true }" (click)="this.sidenav.close()"><mat-icon class="pr-1">map</mat-icon>Map</a>
-        <a mat-list-item routerLink="/locations" routerLinkActive="active-router-link" [routerLinkActiveOptions]="{ exact: true }" (click)="this.sidenav.close()"><mat-icon class="pr-1">room</mat-icon>Locations</a>
+        <a mat-list-item routerLink="/map" routerLinkActive="active-router-link" [routerLinkActiveOptions]="{ exact: true }" (click)="handleSideNavClose()"><mat-icon class="pr-1">map</mat-icon>Map</a>
+        <a mat-list-item routerLink="/locations" routerLinkActive="active-router-link" [routerLinkActiveOptions]="{ exact: true }" (click)="handleSideNavClose()"><mat-icon class="pr-1">room</mat-icon>Locations</a>
       </mat-nav-list>
     </mat-sidenav>
     <mat-sidenav-content>

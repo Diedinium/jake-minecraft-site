@@ -1,7 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
 
 .fixed-navbar {
-    width: 100%;
     position: fixed;
     top: 0;
     z-index: 10;
@@ -10,7 +9,7 @@
 .fixed-sidenav {
     position: fixed;
     top: 0;
-    z-index: 900;
+    z-index: 20;
 }
 
 .navbar .container .title {
@@ -64,8 +63,8 @@ html, body {
 
 body { 
     margin: 0; 
-    font-family: Roboto, "Helvetica Neue", sans-serif; 
-    margin-top: 64px;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+    padding-top: 64px; 
 }
 
 .mat-drawer-backdrop {
@@ -91,6 +90,10 @@ mat-sidenav {
 .header-spacer {
     flex: 1 1 auto;
 }
+
+.mat-drawer-container{
+    position: unset!important;
+} 
 
 @media only screen and (max-width: 600px) {
     body {
