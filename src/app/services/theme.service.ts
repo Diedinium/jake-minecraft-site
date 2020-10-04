@@ -40,7 +40,6 @@ export class ThemeService {
       });
     }
     else {
-      alert("addEventListener not available");
       darkMediaQuery.addListener(e => {
         const currentSetting: boolean = e.matches;
 

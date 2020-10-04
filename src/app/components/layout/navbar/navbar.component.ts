@@ -11,15 +11,32 @@ export class NavbarComponent implements OnInit {
   public isDarkMode: boolean;
 
   constructor(private sidenav: SidenavService, private _themeService: ThemeService) {
-    window.matchMedia("(prefers-color-scheme: dark)").addEventListener('change', e => {
-      const currentSetting: boolean = e.matches;
-      if (currentSetting) {
-        this.isDarkMode = true;
-      }
-      else {
-        this.isDarkMode = false;
-      }
-    });
+    const darkMediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+
+    if(typeof darkMediaQuery.addEventListener == 'function') {
+      darkMediaQuery.addEventListener('change', (e) => {
+        const currentSetting: boolean = e.matches;
+        
+        if (currentSetting) {
+          this.isDarkMode = true;
+        }
+        else {
+          this.isDarkMode = false;
+        }
+      });
+    }
+    else {
+      darkMediaQuery.addListener(e => {
+        const currentSetting: boolean = e.matches;
+
+        if (currentSetting) {
+          this.isDarkMode = true;
+        }
+        else {
+          this.isDarkMode = false;
+        }
+      });
+    }
   }
 
   ngOnInit(): void {

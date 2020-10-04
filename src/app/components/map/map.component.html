@@ -4,6 +4,10 @@
     <a mat-button routerLink="/map" routerLinkActive="active-router-link">Map</a>
 </mat-toolbar>
 
-<div class="container" style="height: 1500px;">
-    <p class="pt-2">Map works!</p>
+<div class="container px-2">
+    <p>Use the pop-out navigation pane on the right hand side to change the map view.</p>
+
+    <p>When you scroll in far enough, location names will be shown. Click the button below to open the map in a seperate tab.</p>
+    <a mat-raised-button href="https://map.jake-minecraft.net/?worldname=world&mapname=surface&zoom=0&x=33&y=64&z=90" target="_blank" color="accent" class="mb-2">Full screen <mat-icon>zoom_out_map</mat-icon></a>
+    <iframe class="responsive-iframe" src="https://map.jake-minecraft.net/?worldname=world&mapname=surface&zoom=0&x=33&y=64&z=90"></iframe>
 </div>

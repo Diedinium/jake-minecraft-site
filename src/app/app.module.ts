@@ -13,6 +13,7 @@ import { LocationsComponent } from './components/locations/locations.component';
 import { AboutComponent } from './components/about/about.component';
 import { ThemeService } from './services/theme.service';
 import { CookieService } from 'ngx-cookie-service';
+import { FooterComponent } from './components/layout/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { CookieService } from 'ngx-cookie-service';
     NavbarComponent,
     MapComponent,
     LocationsComponent,
-    AboutComponent
+    AboutComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
