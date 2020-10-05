@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
@@ -14,6 +14,8 @@ import { AboutComponent } from './components/about/about.component';
 import { ThemeService } from './services/theme.service';
 import { CookieService } from 'ngx-cookie-service';
 import { FooterComponent } from './components/layout/footer/footer.component';
+import { ServerStatusComponent } from './components/layout/server-status/server-status.component';
+import { ServerStatusService } from './services/server-status.service';
 
 @NgModule({
   declarations: [
@@ -23,15 +25,17 @@ import { FooterComponent } from './components/layout/footer/footer.component';
     MapComponent,
     LocationsComponent,
     AboutComponent,
-    FooterComponent
+    FooterComponent,
+    ServerStatusComponent
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MaterialModule
   ],
-  providers: [SidenavService, CookieService, ThemeService ],
+  providers: [SidenavService, CookieService, ThemeService, ServerStatusService ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

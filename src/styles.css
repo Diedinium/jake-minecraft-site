@@ -78,12 +78,22 @@
     padding-top: 1rem;
 }
 
+.pt-4 {
+    padding-top: 2.5rem!important;
+}
+
+.pb-2 {
+    padding-bottom: 1rem!important;
+}
+
 .px-2 {
-    padding: 1rem 0;
+    padding-left: 1rem!important;
+    padding-right: 1rem!important;
 }
 
 .py-2 {
-    padding: 0 1rem;
+    padding-top: 1rem!important;
+    padding-bottom: 1rem!important;
 }
 
 .pb-2 {
@@ -131,8 +141,51 @@ mat-sidenav {
     flex: 1 1 auto;
 }
 
+.hero-image-wrapper {
+    overflow: hidden;
+    max-height: 300px;
+}
+
+.hero-image {
+    width: 100%;
+}
+
 .sidenav-content-padding {
     padding-top: 64px;
+}
+
+.server-status-position {
+    position: absolute;
+    width: 80%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.server-status-online {
+    color: green!important;
+    font-weight: bold;
+}
+
+.server-status-offline {
+    color: red!important;
+    font-weight: bold;
+}
+
+.rounded-corners {
+    border-radius: 0.25rem;
+}
+
+.position-relative {
+    position: relative;
+}
+
+.position-absolute {
+    position: absolute;
+}
+
+.spinner-style {
+    display: inline!important;
 }
 
 @media only screen and (max-width: 600px) {

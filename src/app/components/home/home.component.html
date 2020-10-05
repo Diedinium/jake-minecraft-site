@@ -2,10 +2,23 @@
     <a mat-button routerLink="/" routerLinkActive="active-router-link">Home</a>
 </mat-toolbar>
 
-<div class="container" style="height: 900px;">
-    <p class="pt-2">Work in progres...</p>
+<div class="container" style="min-height: 900px;">
+    <div class="hero-image-wrapper">
+        <img src="https://designshack.net/wp-content/uploads/placeholder-image-368x246.png" class="hero-image" />
+    </div>
 
-    <a mat-raised-button color="accent" routerLink="/about" class="mr-1">Link to About</a>
-    <a mat-raised-button color="accent" routerLink="/map" class="mr-1">Link to Map</a>
-    <a mat-raised-button color="accent" routerLink="/locations" class="mr-1">Link to Locations</a>
+    <div class="subtle-shadow rounded-corners mb-2 position-relative">
+        <app-server-status></app-server-status>
+        <div class="px-2 pb-2" style="margin-top: -25px;">
+            <h1>Main content will go here...</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur consectetur omnis explicabo, dolore
+                esse
+                autem quibusdam voluptate alias exercitationem similique obcaecati doloremque, beatae amet neque eum
+                quis ut
+                provident. Accusamus?</p>
+            <a mat-raised-button color="accent" routerLink="/about" class="mr-1">Link to About</a>
+            <a mat-raised-button color="accent" routerLink="/map" class="mr-1">Link to Map</a>
+            <a mat-raised-button color="accent" routerLink="/locations" class="mr-1">Link to Locations</a>
+        </div>
+    </div>
 </div>

@@ -1,0 +1,10 @@
+<mat-card *ngIf="!isLoaded" class="server-status-position">
+    <mat-card-title>Server Status</mat-card-title>
+    <mat-card-content >Loading...</mat-card-content>
+</mat-card>
+
+<mat-card *ngIf="isLoaded" class="server-status-position">
+    <mat-card-title>Server Status</mat-card-title>
+    <mat-card-subtitle *ngIf="serverStatus.online" class="server-status-online">online</mat-card-subtitle>
+    <mat-card-subtitle *ngIf="!serverStatus.online" class="server-status-offline">offline</mat-card-subtitle>
+</mat-card>
